@@ -32,6 +32,17 @@ endif
 
 filetype plugin indent on
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+colorscheme desert
+
 "===================="
 " Some basic options "
 "===================="
@@ -55,8 +66,6 @@ set shell=sh                    " I use fish-shell. Vim shouldn't.
 let mapleader=","               " Default is \, I prefer ,.
 set backup                      " Be safe.
 set clipboard=unnamed           " Allow vim to use the X clipboard.
-set formatoptions=cqn1j         " See :help fo-table.
-set gdefault                    " Replace globally by default.
 set history=1000                " Remember a lot.
 set incsearch                   " Search incrementally as I type.
 set relativenumber number       " Use relative line numbers.
@@ -76,14 +85,3 @@ set list listchars=tab:»\ ,trail:°
 
 " Highlight the search term when you search for it.
 set hlsearch
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-colorscheme desert
