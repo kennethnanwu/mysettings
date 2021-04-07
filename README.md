@@ -30,8 +30,6 @@ else
       \ 'https://github.com/VundleVim/Vundle.vim'
 endif
 
-filetype plugin indent on
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -85,3 +83,7 @@ set list listchars=tab:»\ ,trail:°
 
 " Highlight the search term when you search for it.
 set hlsearch
+
+" This will enable all the plugins. This line needs to happen after all of the plugin files have been added.
+" It's easiest to just put it at the end of your vimrc and forget about it.
+filetype plugin indent on
