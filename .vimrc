@@ -39,10 +39,35 @@ set splitbelow splitright
 " non-obtrusive way to mark these special characters.
 set list listchars=tab:»\ ,trail:°
 set laststatus=2
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+set cursorline                  " Highlight the current line.
+set hidden                      " Allow buffer backgrounding.
+set scrolloff=3                 " Add top/bottom scroll margins.
+set ttyfast lazyredraw          " Make drawing faster.
+set shell=sh                    " I use fish-shell. Vim shouldn't.
+
+let mapleader=","               " Default is \, I prefer ,.
+set backup                      " Be safe.
+set history=1000                " Remember a lot.
+set incsearch                   " Search incrementally as I type.
+set relativenumber number       " Use relative line numbers.
+set showcmd                     " Show the last command.
+set showmatch                   " When a bracket is typed show its match.
+set smartcase                   " Be smart about when case sensitivity matters.
+set smarttab                    " Only respect shiftwidth for code indents.
+set splitbelow splitright       " Windows are created in the direction I read.
+set undofile                    " Saves undo history across sessions.
+set viewoptions=cursor,folds    " Save cursor position and folds.
+set wildmenu                    " Enhanced completion.
+set wildmode=list:longest       " Act like shell completion.
+
+" use » to mark Tabs and ° to mark trailing whitespace. This is a
+" non-obtrusive way to mark these special characters.
+set list listchars=tab:»\ ,trail:°
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
