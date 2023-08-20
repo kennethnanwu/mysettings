@@ -1,6 +1,13 @@
-export PS1="\[\033[36m\]\t\[\033[m\]@\[\033[33;1m\]\w\[\033[m\]\> "
-export CLICOLOR=1
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+## ~/.bash_profile
+## Executed by the bash login shell.
+## If this is run, then ~/.profile is not.
 
-alias ll='ls -l'
-alias la='ls -a'
+# .profile has my env vars and paths
+if [ -f "$HOME/.profile" ]; then
+  source "$HOME/.profile"
+fi
+
+# config bash
+if [ -f "$HOME/.bashrc" ]; then
+  source "$HOME/.bashrc"
+fi
