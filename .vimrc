@@ -1,12 +1,12 @@
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" Required
-" let Vundle manage Vundle, required
-  Plugin 'gmarik/vundle'
+  " let Vundle manage Vundle, required
+  Plugin 'VundleVim/Vundle.vim'
   Plugin 'vim-airline/vim-airline'
   Plugin 'flazz/vim-colorschemes'
 call vundle#end()
+filetype plugin indent on
 
 " Enable modern Vim features not compatible with Vi spec.
 set nocompatible
@@ -75,4 +75,3 @@ nnoremap <unique> <leader>v- :vertical resize -5<CR>
 nnoremap <unique> <leader>+ :resize +5<CR>
 nnoremap <unique> <leader>- :resize -5<CR>
 
-filetype plugin indent on
