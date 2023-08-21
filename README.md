@@ -5,3 +5,4 @@ g; will jump you to the last place where you entered insert mode. Pressing it ag
 %:h into most Ex commands ("colon commands") represents the path to the current file (without the file's name). To open a file in the same directory: use 
 :find %:h/<TAB>
 
+Install vim plugin: launch vim and run :PluginInstall
