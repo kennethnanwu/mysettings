@@ -1,4 +1,6 @@
+set nocompatible " Enable modern Vim features not compatible with Vi spec. Required
 filetype off
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   " let Vundle manage Vundle, required
@@ -8,8 +10,6 @@ call vundle#begin()
 call vundle#end()
 filetype plugin indent on
 
-" Enable modern Vim features not compatible with Vi spec.
-set nocompatible
 syntax on
 set number
 set relativenumber
