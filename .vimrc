@@ -10,6 +10,8 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
     Plugin 'flazz/vim-colorschemes'
     Plugin 'vim-syntastic/syntastic'
     Plugin 'tpope/vim-commentary' " `gcc` in normal mode to comment out a line. `gc` in visual mode to comment out selections.
+    Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
   call vundle#end()
 else
   echomsg 'Vundle is not installed.'
@@ -22,7 +24,7 @@ set number
 set relativenumber
 set hlsearch
 set nosmartindent
-set clipboard=unnamedplus
+set clipboard=unnamed           " Change this to unnamedplus for Linux.
 set cursorline
 set scrolloff=3
 set splitbelow splitright
@@ -47,7 +49,7 @@ set wildmode=list,longest,full  " Act like shell completion. Nice menu when typi
 set list listchars=tab:»\ ,trail:°    " Use » to mark Tabs and ° to mark trailing whitespace.
 let mapleader=","               " Default is \, I prefer ,.
 
-nnoremap <silent> <C-L> :nohlsearch<C-R> " Use CTRL-L to clear the hightlighting of 'hlsearch'.
+nnoremap <silent> <C-L> :noh<CR> " Use CTRL-L to clear the hightlighting of 'hlsearch'.
 
 "=============================="
 "       Plugin settings        "
@@ -73,10 +75,14 @@ augroup ProjectDrawer
   autocmd VimEnter * :Vexplore
 augroup END
 
-nnoremap <unique> <leader>t :e .<CR>
-nnoremap <unique> <leader>T :E .<CR>
+nnoremap <unique> <leader>t :Lexplore .<CR>
+nnoremap <unique> <leader>T :Vexplore<CR>
 nnoremap <unique> <leader>v+ :vertical resize +5<CR>
 nnoremap <unique> <leader>v- :vertical resize -5<CR>
 nnoremap <unique> <leader>+ :resize +5<CR>
 nnoremap <unique> <leader>- :resize -5<CR>
+
+"=fzf="
+nnoremap <unique> <C-P> :Files<CR>
+nnoremap <unique> <leader>b :Buffers<CR>
 
