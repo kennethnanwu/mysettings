@@ -1,7 +1,3 @@
-autoload -U colors && colors
-PROMPT='%F{cyan}%n%f:~%%'
-export CLICOLOR=1
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+# Add time
+PROMPT='%{$fg[yellow]%}[%*] '$PROMPT
 
-alias ll='ls -l'
-alias la='ls -a'
